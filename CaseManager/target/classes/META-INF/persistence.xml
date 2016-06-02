@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence 
+http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+	<persistence-unit name="case_data" transaction-type="RESOURCE_LOCAL">
+	
+	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+	
+	 	<properties>
+	         <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
+	         <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+	         <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+	         <property name="hibernate.connection.username" value="cmanager"/>
+	         <property name="hibernate.connection.password" value="Tang6468"/>
+	         
+	
+	  
+				<!-- 连接的字符编码 -->
+				<property name="hibernate.connection.charSet" value="UTF-8" />
+				<property name="hibernate.connection.characterEncoding"
+					value="UTF-8" />
+	
+	
+				<!-- ==============Hibernate 附加设置================= -->
+				<!-- create 删除以前的，从新建. create-drop 根据model类生成表,但是sessionFactory一关闭,表就自动删除 
+					. update 最常用的属性，也根据model类生成表,即使表结构改变了,表中的行仍然存在,不会删除以前的行      validate : 只会和数据库中的表进行比较,不会创建新表,但是会插入新值 -->
+				<property name="hibernate.hbm2ddl.auto" value="update" />
+	
+				<!-- 在控制台打印SQL语句 -->
+				<property name="hibernate.show_sql" value="true" />
+	
+				<!-- 格式化 SQL语句-->
+				<property name="hibernate.format_sql" value="false" />
+	
+				<!-- Hiberante将为SQL产生注释，这样更利于调试-->
+				<property name="hibernate.use_sql_comments" value="true" />
+	
+	
+				<!-- ==============Hibernate C3P0设置================= -->
+				<property name="c3p0.testConnectionOnCheckout" value="true"/>
+				<!-- c3p0连接提供器 -->
+				<property name="hibernate.connection.provider_class"
+					value="org.hibernate.c3p0.internal.C3P0ConnectionProvider" />
+					
+				<!-- 最小连接数 -->
+				<property name="c3p0.min_size" value="5" />
+				
+				<!-- 最大连接数 -->
+				<property name="c3p0.max_size" value="30" />
+				
+				<!--最大空闲时间,60秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+				<property name="c3p0.maxIdleTime" value="60" />
+				
+				<!-- 获得连接的超时时间,如果超过这个时间,会抛出异常，单位毫秒 -->
+				<property name="c3p0.timeout" value="1800" />
+				
+				<!-- 最大的PreparedStatement的数量 -->
+				<property name="c3p0.max_statements" value="50" />
+				
+				<!-- 每隔120秒检查连接池里的空闲连接 ，单位是秒-->
+				<property name="c3p0.idle_test_period" value="120" />
+				
+				<!-- 当连接池里面的连接用完的时候，C3P0一下获取的新的连接数 -->
+				<property name="c3p0.acquire_increment" value="1" />
+				<!-- 是否每次都验证连接是否可用 -->
+				<property name="c3p0.validate" value="false" />
+		</properties>	
+	
+	</persistence-unit>
+</persistence>
