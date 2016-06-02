@@ -3,7 +3,12 @@ package com.cloud.cases.vo;
 import java.sql.Blob;
 
 import com.cloud.cases.BaseVO;
-
+/**
+ * 申请人开展表实体对应VO
+ * @author NB
+ *
+ * @date 2016年6月2日 下午5:12:05
+ */
 public class ApplicantExVO extends BaseVO {
 
 	private String tel;			//申请人电话号码
@@ -14,8 +19,8 @@ public class ApplicantExVO extends BaseVO {
 	private String othercontact;//其它联系方式
 	private int kind=0;			//申请人类型  0=代表当事人，1=代理律师，2=代理人
 	
-	private int applicantID;
-	private String applicantusername;
+	private int applicantID;//申请人表实体id
+	private String applicantusername;//申请人姓名
 	
 	public String getTel() {
 		return tel;

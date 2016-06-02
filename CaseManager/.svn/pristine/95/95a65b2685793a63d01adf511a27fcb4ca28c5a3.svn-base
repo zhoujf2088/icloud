@@ -1,6 +1,8 @@
 package com.cloud.cases.entity;
 
 import java.sql.Blob;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -9,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -36,6 +39,9 @@ public class ApplicantEntity extends BaseEntity {
     //基本信息表与此扩展表是双向一对一关联，且扩展表为维护端
     private ApplicantExEntity applicantExEntity;
     
+  //申请人基本信息表与案件信息表之间的一对多的关联，由功能表维护
+  	private Set<LitigationEntity> litigations = new HashSet<LitigationEntity>();
+
     
     @Column(name="F_cardID",length=18,nullable=false,unique=true)
 	public String getCardID() {
@@ -118,6 +124,15 @@ public class ApplicantEntity extends BaseEntity {
 	}
 	public void setApplicantExEntity(ApplicantExEntity applicantExEntity) {
 		this.applicantExEntity = applicantExEntity;
+	}
+	
+	
+	@OneToMany(cascade=CascadeType.ALL,mappedBy="applicantEntity")
+	public Set<LitigationEntity> getLitigations() {
+		return litigations;
+	}
+	public void setLitigations(Set<LitigationEntity> litigations) {
+		this.litigations = litigations;
 	}
     
     

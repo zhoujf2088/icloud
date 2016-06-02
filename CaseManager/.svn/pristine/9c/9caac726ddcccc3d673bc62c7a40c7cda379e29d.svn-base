@@ -21,6 +21,7 @@ public class FunctionEntity extends BaseEntity {
 	private String functionname;			//功能名称
 	private String functionurl;				//请求地址
 	private String functiondesc;			//功能描述
+	
 	//功能表与模块表之间的多对一关联
 	private ModuleInfoEntity modulinfo;
 	

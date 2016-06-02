@@ -4,7 +4,7 @@ import java.sql.Blob;
 
 import com.cloud.cases.BaseVO;
 /**
- * 
+ * 申请人表实体对应VO
  * @author ZhouJF
  * @date 2016年5月31日 上午11:27:01
  */
