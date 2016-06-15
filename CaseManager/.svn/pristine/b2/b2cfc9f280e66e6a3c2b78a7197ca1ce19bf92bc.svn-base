@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- 文件名建议 改成项目真实名字 -->
-<casemanager>
-	<!-- 多个半角逗号分割 ，支持*通配符-->
-	<excludeAuthUrls>
-
-	</excludeAuthUrls>
-	<Home>D:/root/Home</Home>
-</casemanager>

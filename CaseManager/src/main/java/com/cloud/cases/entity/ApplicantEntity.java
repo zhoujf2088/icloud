@@ -30,10 +30,10 @@ public class ApplicantEntity extends BaseEntity {
     private String username;	//申请人姓名
     private String password;	//登陆密码
     private String origin;		//籍贯
-    private int gender;			//性别   1=男  0=女
+    private int gender=1;		//性别   1=男  0=女
     private Blob cardphoto;		//身份证上的照片
     private String registeraddress;//户口所在地址
-    private String nation;		// 名族
+    private String nation;		// 民 族
     private Blob fingerprint;	//指纹信息
     
     //基本信息表与此扩展表是双向一对一关联，且扩展表为维护端
@@ -93,7 +93,7 @@ public class ApplicantEntity extends BaseEntity {
 		this.cardphoto = cardphoto;
 	}
 	
-	@Column(name="F_registeraddress",nullable=false)
+	@Column(name="F_registeraddress",nullable=false,length=64)
 	public String getRegisteraddress() {
 		return registeraddress;
 	}
@@ -101,7 +101,7 @@ public class ApplicantEntity extends BaseEntity {
 		this.registeraddress = registeraddress;
 	}
 	
-	@Column(name="F_nation",nullable=false)
+	@Column(name="F_nation",nullable=false,length=16)
 	public String getNation() {
 		return nation;
 	}
@@ -118,7 +118,7 @@ public class ApplicantEntity extends BaseEntity {
 	}
 	
 	 @OneToOne(cascade = CascadeType.ALL)
-	 @JoinColumn(name = "F_ApplicantExID")
+	 @JoinColumn(name = "F_applicantExID")
 	public ApplicantExEntity getApplicantExEntity() {
 		return applicantExEntity;
 	}

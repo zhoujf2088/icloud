@@ -11,9 +11,12 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	 	<properties>
 	         <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
 	         <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
+	    <!--      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@10.10.10.51:1521:orcl"/>
+	         <property name="hibernate.connection.username" value="C##admin"/>
+	         <property name="hibernate.connection.password" value="Tang6468"/>-->
 	         <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
 	         <property name="hibernate.connection.username" value="cmanager"/>
-	         <property name="hibernate.connection.password" value="Tang6468"/>
+	         <property name="hibernate.connection.password" value="Tang6468"/> 
 	         
 	
 	  

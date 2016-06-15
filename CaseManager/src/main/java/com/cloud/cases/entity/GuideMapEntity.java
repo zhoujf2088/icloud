@@ -39,7 +39,7 @@ public class GuideMapEntity extends BaseEntity {
 		this.name = name;
 	}
 	
-	@Column(name="F_Description")
+	@Column(name="F_Description",length=256)
 	public String getDescription() {
 		return description;
 	}
@@ -57,7 +57,7 @@ public class GuideMapEntity extends BaseEntity {
 		this.picture = picture;
 	}
 	
-	@Column(name="F_Picture")
+	@Column(name="F_adduser")
 	public String getAdduser() {
 		return adduser;
 	}

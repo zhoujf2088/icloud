@@ -27,6 +27,7 @@ public class DepartmentEntity extends BaseEntity {
 	private String address;	//部门地址
 	private String description;	//部门简介
 	private int superiorID;	//上级部门ID
+	private String otherInfo; //部门其它说明
 	
 	private Set<EmployeeEntity> employee = new HashSet<EmployeeEntity>();
 	
@@ -38,7 +39,7 @@ public class DepartmentEntity extends BaseEntity {
 		this.name = name;
 	}
 	
-	@Column(name="F_Manager")
+	@Column(name="F_Manager",length=16)
 	public String getManager() {
 		return manager;
 	}
@@ -46,7 +47,7 @@ public class DepartmentEntity extends BaseEntity {
 		this.manager = manager;
 	}
 	
-	@Column(name="F_Address")
+	@Column(name="F_Address",length=32)
 	public String getAddress() {
 		return address;
 	}
@@ -54,7 +55,7 @@ public class DepartmentEntity extends BaseEntity {
 		this.address = address;
 	}
 	
-	@Column(name="F_Description")
+	@Column(name="F_Description",length=512)
 	public String getDescription() {
 		return description;
 	}
@@ -70,6 +71,13 @@ public class DepartmentEntity extends BaseEntity {
 		this.superiorID = superiorID;
 	}
 	
+	@Column(name="F_otherInfo")
+	public String getOtherInfo() {
+		return otherInfo;
+	}
+	public void setOtherInfo(String otherInfo) {
+		this.otherInfo = otherInfo;
+	}
 	@OneToMany(cascade=CascadeType.ALL,mappedBy="department")
 	public Set<EmployeeEntity> getEmployee() {
 		return employee;

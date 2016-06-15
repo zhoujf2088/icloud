@@ -18,7 +18,6 @@ import com.sun.org.glassfish.gmbal.Description;
 /**
  * 
  * @author NB
- *
  * @date 2016年5月31日 上午11:46:46
  */
 @Entity
@@ -51,7 +50,7 @@ public class EmployeeEntity extends BaseEntity {
 		this.gender = gender;
 	}
 	
-	@Column(name="F_Tel",nullable=false)
+	@Column(name="F_Tel",nullable=false,length=11)
 	public String getTel() {
 		return tel;
 	}
@@ -69,7 +68,7 @@ public class EmployeeEntity extends BaseEntity {
 		this.photo = photo;
 	}
 	
-	@Column(name="F_Email")
+	@Column(name="F_Email",length=32)
 	public String getEmail() {
 		return Email;
 	}
@@ -77,7 +76,7 @@ public class EmployeeEntity extends BaseEntity {
 		Email = email;
 	}
 	
-	@Column(name="F_Job",nullable=false)
+	@Column(name="F_Job",nullable=false,length=16)
 	public String getJob() {
 		return job;
 	}
@@ -85,7 +84,7 @@ public class EmployeeEntity extends BaseEntity {
 		this.job = job;
 	}
 	
-	@Column(name="F_CVInfo")
+	@Column(name="F_CVInfo",length=512)
 	public String getCVInfo() {
 		return CVInfo;
 	}

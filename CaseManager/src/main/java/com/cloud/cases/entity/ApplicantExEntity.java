@@ -76,7 +76,7 @@ public class ApplicantExEntity extends BaseEntity {
 		this.nowaddress = nowaddress;
 	}
 
-	@Column(name="F_othercontact",length=62)
+	@Column(name="F_othercontact",length=64)
 	public String getOthercontact() {
 		return othercontact;
 	}

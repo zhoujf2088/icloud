@@ -8,6 +8,7 @@ public class DepartmentVO extends BaseVO{
 	private String address;	//部门地址
 	private String description;	//部门简介
 	private int superiorID;	//上级部门ID
+	private String otherInfo; //部门其它说明
 	
 	public String getName() {
 		return name;
@@ -39,4 +40,11 @@ public class DepartmentVO extends BaseVO{
 	public void setSuperiorID(int superiorID) {
 		this.superiorID = superiorID;
 	}
+	public String getOtherInfo() {
+		return otherInfo;
+	}
+	public void setOtherInfo(String otherInfo) {
+		this.otherInfo = otherInfo;
+	}
+	
 }

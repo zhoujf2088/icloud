@@ -6,24 +6,22 @@ import com.cloud.cases.BaseVO;
 /**
  * 
  * @author NB
- *案件表实体对应VO
+ *	案件表实体对应VO
  * @date 2016年6月2日 下午4:46:18
  */
 public class LitigationVO extends BaseVO{
 	private String name;				//名称
-	private String ApplicantID;			//申请人ID
 	private String deskCode;			//文案编号
-	private String litigationresonID;	//涉案及由
-	private int litigationKind;			//案件类型
+	private int litigationKind;			//案件类型     1=诉讼类案件   0=执行类案件
 	private int applyType;				//申请类型
 	private String Description;			//诉讼描述
 	private Date courtTime;				//开庭时间
 	private String courtaddress;		//开庭地点
 	private Double litigationAmount;	//标的金额
 	private Double litigationfee;		//诉讼费用
-	private int Checkfee;				//是否已缴费
+	private int Checkfee;				//是否已缴费     1=未缴费   0=已缴费
 	private String adjudicator;			//主审官
-	private int state;					//状态
+	private int state;					//状态    0=已提交   1.已受理  2.在审 3.已结案   4.移交  5.失败
 	private String StateInfo;			//状态说明
 	
 	private int litigationResonId;  //案由ID
@@ -39,23 +37,11 @@ public class LitigationVO extends BaseVO{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getApplicantID() {
-		return ApplicantID;
-	}
-	public void setApplicantID(String applicantID) {
-		ApplicantID = applicantID;
-	}
 	public String getDeskCode() {
 		return deskCode;
 	}
 	public void setDeskCode(String deskCode) {
 		this.deskCode = deskCode;
-	}
-	public String getLitigationresonID() {
-		return litigationresonID;
-	}
-	public void setLitigationresonID(String litigationresonID) {
-		this.litigationresonID = litigationresonID;
 	}
 	public int getLitigationKind() {
 		return litigationKind;

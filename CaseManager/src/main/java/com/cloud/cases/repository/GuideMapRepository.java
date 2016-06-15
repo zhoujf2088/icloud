@@ -2,8 +2,8 @@ package com.cloud.cases.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.cloud.cases.entity.FunctionEntity;
+import com.cloud.cases.entity.GuideMapEntity;
 
-public interface GuideMapRepository extends JpaRepository<FunctionEntity, Integer> {
+public interface GuideMapRepository extends JpaRepository<GuideMapEntity, Integer> {
 
 }

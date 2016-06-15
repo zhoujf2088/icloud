@@ -17,7 +17,7 @@ public class ApplicantVO extends BaseVO {
     private int gender;			//性别   1=男  0=女
     private Blob cardphoto;		//身份证上的照片
     private String registeraddress;//户口所在地址
-    private String nation;		// 名族
+    private String nation;		// 民族
     private Blob fingerprint;	//指纹信息
     
     

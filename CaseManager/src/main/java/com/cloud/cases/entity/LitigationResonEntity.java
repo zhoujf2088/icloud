@@ -30,7 +30,7 @@ public class LitigationResonEntity extends BaseEntity {
 	//
 	private Set<LitigationEntity> litigations = new HashSet<LitigationEntity>();
 	
-	@Column(name="F_TypeName",nullable=false)
+	@Column(name="F_TypeName",nullable=false,length=32)
 	public String getTypeName() {
 		return typeName;
 	}
@@ -38,7 +38,7 @@ public class LitigationResonEntity extends BaseEntity {
 		this.typeName = typeName;
 	}
 	
-	@Column(name="F_Description")
+	@Column(name="F_Description",length=512)
 	public String getDescription() {
 		return Description;
 	}
